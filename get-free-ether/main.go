@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 
+	// "github.com/ethereum/go-ethereum/accounts/keystore"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/ethclient"
 )
@@ -23,17 +24,14 @@ func main() {
 	// 	log.Fatal("Error when create wallet")
 	// }
 
-	// 93dd1c4800952758b6fa97a504fa4f77c09bbe4d
-	// c757a52e98041a3a5af4f5b5eae60969b9f8e47f
-
 	client, err := ethclient.DialContext(context.Background(), url)
 	if err != nil {
 		log.Fatal("Error to create a ether client: ", err)
 	}
 	defer client.Close()
 
-	a1 := common.HexToAddress("93dd1c4800952758b6fa97a504fa4f77c09bbe4d")
-	a2 := common.HexToAddress("c757a52e98041a3a5af4f5b5eae60969b9f8e47f")
+	a1 := common.HexToAddress("a6e74cb9689c6ed9f958835a92b89782ee994fdd")
+	a2 := common.HexToAddress("ee5be175a72a23b08ef163b61e1b95a76c616008")
 
 	b1, err := client.BalanceAt(context.Background(), a1, nil)
 	if err != nil {
