@@ -12,7 +12,7 @@ import (
 
 func main() {
 	// generate file with address
-	// key := keystore.NewKeyStore("./wallet", keystore.StandardScryptN, keystore.StandardScryptP)
+	// key := keystore.NewKeyStore("./wallets", keystore.StandardScryptN, keystore.StandardScryptP)
 	var password = "password"
 	// addr, err := key.NewAccount(password)
 	// if err != nil {
@@ -21,7 +21,7 @@ func main() {
 	// fmt.Println(addr.Address)
 
 	// get private, public keys and address from file
-	b, err := ioutil.ReadFile("./wallet/UTC--2023-05-18T11-02-45.530355800Z--2e597af042ad5bf618f98ec99791a10f754b8c32")
+	b, err := ioutil.ReadFile("./wallets/UTC--2023-05-18T11-02-45.530355800Z--2e597af042ad5bf618f98ec99791a10f754b8c32")
 	if err != nil {
 		log.Fatal("Error read from file: ", err)
 	}
