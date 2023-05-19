@@ -1,0 +1,3 @@
+solcjs --bin --abi smart-contracts/todo.sol -o build ------- generate .abi and .bin files from floder "smart-contracts" in folder "build"
+
+abigen --bin=build/smart-contracts_todo_sol_Todo.bin --abi=build/smart-contracts_todo_sol_Todo.abi -pkg=todo --out=gen/todo.go ------- generate .go file from folder "build" with package "todo" in "gen" folder

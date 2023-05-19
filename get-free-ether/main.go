@@ -30,7 +30,7 @@ func main() {
 	}
 	defer client.Close()
 
-	a1 := common.HexToAddress("a6e74cb9689c6ed9f958835a92b89782ee994fdd")
+	a1 := common.HexToAddress("0xA6E74cb9689c6Ed9F958835A92b89782EE994fDd")
 	a2 := common.HexToAddress("ee5be175a72a23b08ef163b61e1b95a76c616008")
 
 	b1, err := client.BalanceAt(context.Background(), a1, nil)
